@@ -15,7 +15,7 @@ def init(musthave):
 # writing logfile
 def log(message):
     workdir="log"
-    filename="new_log"
+    filename="log_" + str(datetime.date.today()) + ".log"
     file=dir_env(workdir, filename)[2]
     with open(file, "a") as logfile:
         logfile.write(str(datetime.datetime.now()) + "  -  " + message + "\n")
